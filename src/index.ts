@@ -1,5 +1,6 @@
 import { getEditorHtml } from '@copus/editor';
 import { Hono } from 'hono';
+import { setupDom } from './libs/ssr';
 
 const app = new Hono();
 
@@ -19,7 +20,9 @@ app.get('/client/common/opus/detail/*', async (c) => {
     });
     const res = await response.json();
     if (res.data.content) {
+        const cleanUp = setupDom();
         res.data.htmlContent = await getEditorHtml(res.data.content);
+        cleanUp();
     }
     return c.json(res);
 });

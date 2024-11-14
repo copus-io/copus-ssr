@@ -3,5 +3,5 @@ await Bun.build({
     entrypoints: ['./src/index.ts'],
     outdir: './dist',
     target: 'bun',
-    external: ['hono', '@copus/editor'],
+    external: ['hono', '@copus/editor', 'jsdom'],
 });

@@ -7,11 +7,13 @@
         "test": "bun test"
     },
     "dependencies": {
-        "@copus/editor": "^0.17.1-14",
-        "hono": "^4.6.10"
+        "@copus/editor": "^0.17.1-15",
+        "hono": "^4.6.10",
+        "jsdom": "^25.0.1"
     },
     "devDependencies": {
         "@types/bun": "latest",
+        "@types/jsdom": "^21.1.7",
         "prettier": "^3.3.3",
         "prettier-plugin-organize-imports": "^4.1.0",
         "prettier-plugin-packagejson": "^2.5.3"
