@@ -1,0 +1,22 @@
+{
+    "name": "copus-ssr",
+    "scripts": {
+        "dev": "bun run --hot src/index.ts",
+        "start": "bun ./dist/index.js",
+        "build": "bun ./scripts/build.ts",
+        "test": "bun test"
+    },
+    "dependencies": {
+        "@copus/editor": "^0.17.1-14",
+        "hono": "^4.6.10"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "prettier": "^3.3.3",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "prettier-plugin-packagejson": "^2.5.3"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
